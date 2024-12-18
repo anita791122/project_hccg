@@ -1,0 +1,306 @@
+:root,
+[data-bs-theme=light] {
+/* 主色 - 1.主色應用於primary button，輔色為 secondary button 呈現
+          2.當頁面同時有主按鈕以及「 登入會員 」按扭（ 相同層級 ），登入會員需使用第三應用色 
+          3.第三應用色系用於提示：未讀訊息、必填欄位、確認狀態 */
+    --falcon-third :#87D2E3;
+    --falcon-primary-500:#4c44ef; /*按鈕狀態hover*/
+    --falcon-primary-50:#EAEAFD;
+    --falcon-secondary-900:#8C89F1;
+    --falcon-secondary-700:#bc89f1; /*按鈕狀態*/
+    --falcon-secondary-600:#9796ff; /*按鈕狀態*/
+    --falcon-secondary-500:#A0A1FF;
+    --falcon-secondary-50:#F5F6FF;
+/* 主色 end */
+
+/* 文字顏色 - 1.所有頁面標題均使用 Primary 深藍色，小標及內文使用 secondary 深灰色，其餘內文可依照該頁面層級，以中性色區分資訊
+              2.中性色可應用於次級文字與部分元件與狀態示意，*可根據後續頁面待補充內容
+              3.兩種背景色應用於「 強調部分重點資訊 」，增強頁面主次關係
+              4.disabled狀態，統一使用 neutral-400*/
+    --falcon-primary-text-emphasis: #1F2A52;
+    --falcon-secondary-text-emphasis: #323232;
+    --falcon-tertiary-text: #757575;
+    --falcon-placeholder-text:#757575;
+    --falcon-gray-200: #EEEEEE; /*中性色*/
+    --falcon-gray-300: #e0e0e0; /*中性色*/
+    --falcon-gray-400: #bdbdbd; /*中性色-disabledw統一使用此色*/
+    --falcon-gray-500: #9e9e9e; /*中性色*/
+    --falcon-gray-600: #757575; /*中性色*/
+    --falcon-navbar-disabled-color: #bdbdbd;
+    --falcon-btn-text:#fff;
+/* 文字顏色end */
+
+/* CI延伸色系 - 次要訊息以 CI 延伸色系，應用於 tag、icon、插圖 */
+    --tertiary-700:#3697B4;
+    --tertiary-500: #53B1CD;
+    --tertiary-50: #E7F6FA;
+    --yellow-500: #F1D046;
+    --yellow-100 :#FBF1C5;
+    --yellow-50 :#FEF9E5;
+    --darkblue-500: #1F2A52;
+    --darkblue-50: #F1F2F5;
+/* CI延伸色系 end*/
+
+/* link顏色start */
+    --falcon-navbar-hover-color: var(--falcon-primary-500);
+    --falcon-navbar-disabled-color: var(--falcon-gray-400);
+    --falcon-navbar-focus-color: var(--falcon-primary-500);
+/* link顏色end */
+
+}
+
+/* 選單start */
+.navbar-nav {
+    --falcon-nav-link-color: var(--falcon-primary);
+    --falcon-nav-link-hover-color: var(--falcon-navbar-hover-color);
+    --falcon-nav-link-disabled-color: var(--falcon-navbar-disabled-color);
+    --falcon-nav-link-disabled-color: var(--falcon-navbar-focus-color);
+}
+.nav-link {
+    color: var(--falcon-nav-link-color);
+    font-size: 1.2rem;
+}
+.nav-link {
+    color: var(--falcon-nav-link-color);
+    font-size: 1rem;
+}
+.nav-link:hover {
+    color: var(--falcon-nav-link-color);
+    font-size: 1rem;
+}
+/* 選單end */
+
+/* 文字連結start */
+.link-primary {
+    color: RGBA(var(--falcon-primary), var(--falcon-link-opacity, 1)) !important;
+    -webkit-text-decoration-color: RGBA(var(--falcon-primary-rgb), var(--falcon-link-underline-opacity, 1)) !important;
+    text-decoration-color: RGBA(var(--falcon-primary-rgb), var(--falcon-link-underline-opacity, 1)) !important;
+  }
+  .link-primary:hover, .link-primary:focus {
+    color: RGBA(35, 98, 183, var(--falcon-link-opacity, 1)) !important;
+    -webkit-text-decoration-color: RGBA(35, 98, 183, var(--falcon-link-underline-opacity, 1)) !important;
+    text-decoration-color: RGBA(35, 98, 183, var(--falcon-link-underline-opacity, 1)) !important;
+  }
+  
+  .link-secondary {
+    color: RGBA(var(--falcon-secondary), var(--falcon-link-opacity, 1)) !important;
+    -webkit-text-decoration-color: RGBA(var(--falcon-secondary-rgb), var(--falcon-link-underline-opacity, 1)) !important;
+    text-decoration-color: RGBA(var(--falcon-secondary-rgb), var(--falcon-link-underline-opacity, 1)) !important;
+  }
+  .link-secondary:hover, .link-secondary:focus {
+    color: RGBA(93, 103, 118, var(--falcon-link-opacity, 1)) !important;
+    -webkit-text-decoration-color: RGBA(93, 103, 118, var(--falcon-link-underline-opacity, 1)) !important;
+    text-decoration-color: RGBA(93, 103, 118, var(--falcon-link-underline-opacity, 1)) !important;
+  }
+/* 文字連結 end */
+
+
+/* btn */
+.btn-primary {
+    font-size: 1.2rem;
+    --falcon-btn-color: #fff;
+    background: linear-gradient(to bottom, #9685ff 0%,#7862ff 100%); 
+    --falcon-btn-bg: linear-gradient(to bottom, #9685ff 0%,#7862ff 100%);
+    --falcon-btn-border-color: #fff;
+    --falcon-btn-hover-color: #fff;
+    --falcon-btn-hover-bg: #4C44EA;
+    --falcon-btn-hover-border-color: #fff;
+    --falcon-btn-focus-shadow-rgb: 76, 143, 233;
+    --falcon-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --falcon-btn-disabled-color: #fff;
+    --falcon-btn-disabled-bg: ##bdbdbd;
+    --falcon-btn-disabled-border-color: #fff;
+    padding: 0.6rem;
+    border-radius: 2rem;
+}
+/* btn end */
+
+
+/* BG color */
+.bg-teriary {
+    background-color: var(--tertiary-700);
+}
+.bg-teriary50 {
+    background-color: var(--falcon-primary-50);
+}
+
+/* text color */
+.text-secondary {
+    color: var(--falcon-secondary-text-emphasis);
+}
+
+.text-placeholder {
+    color: var(--falcon-placeholder-text);
+}
+
+.text-tertiary_1 {
+    color: #757575;
+}
+.text-tertiary700 {
+    color: var(--tertiary-700);
+}
+
+.text-tertiary500 {
+    color: var(--tertiary-500);
+}
+
+/* title */
+ .intro-title {
+    position: relative;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--falcon-primary-text-emphasis);
+    z-index: 1;
+  }
+  
+.intro-title::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    bottom: 0;
+    transform: translateX(-50%); 
+    width: 10rem;
+    height: 1rem;
+    background-color:var(--tertiary-500);
+    z-index: -1;
+  }
+
+/* Title2 */
+.c-heading__box .title2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    letter-spacing: .05em;
+    padding-left: 78px;
+    position: relative;
+}
+
+.c-heading__box .title2::before {
+    content: "";
+    position: absolute;
+    background: currentColor;
+    width: 60px;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* From */
+.form-label {
+    margin-bottom: 0.1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.form-control {
+    line-height: 2;
+}
+
+.form-select {
+    line-height: 2;
+}
+
+/* other */
+
+.navbar-top {
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+
+.table {
+    border-color: var(--falcon-gray-400) !important;
+    color: var(--falcon-secondary-text-emphasis) !important;
+}
+
+
+.card_BG_Primary {
+    background: var(--falcon-primary-50);
+}
+
+.card-span .card-span-imgPrimary {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+    background: var(--falcon-primary-50);
+}
+
+.text-tertiary {
+    color: var(--tertiary-500);
+}
+
+.card_BG_Tertiary {
+    background: var(--tertiary-50);
+}
+
+.card-span .card-span-imgSTertiary {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+    background: var(--tertiary-50);
+}
+
+.text-yellow {
+    color: var(--yellow-500);
+}
+
+.card_BG_Yellow {
+    background: var(--yellow-50);
+}
+
+.card-span .card-span-imgYellow {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 6px;
+    background: var(--yellow-50);
+}
+
+.card {
+ border: 1px solid rgba(151, 151, 151, 0.2) !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bg_banner {
+    background-color: #d7e7f3;
+}
+
+.text_vaccine {
+    font-size: 1rem;
+    font-weight:bold;
+}
+
+.bg-third {
+    background-color: var(--falcon-third);
+}
+
+.icon_color1 {
+     color: # 3697B4;
+}
+
+.ApptInfo dt, .ApptInfo dd{
+    padding: 0.5rem 2rem;
+}
+
+/* Footer + Copyright */
+.btn-back-to-top {
+    top: -4rem;
+}
+
+.footer_info li {
+    list-style-type: none;
+    margin-bottom: 0.6rem;
+    color: var(--falcon-gray-600);
+}
+
+.footer_info a {
+    color: var(--falcon-primary);
+}
+
+.Copyright a {
+ color: var(--falcon-placeholder-text);
+}
+

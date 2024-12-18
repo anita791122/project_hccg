@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===============================================-->
+  <title>新竹疫苗預約系統 - 步驟3.選擇疫苗及接種站</title>
+  <!-- ===============================================-->
+  <!-- Favicons-->
+  <!-- ===============================================-->
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="../assets/img/favicons/manifest.json">
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../vendors/simplebar/simplebar.min.js"></script>
+
+
+  <!-- ===============================================-->
+  <!--    Stylesheets-->
+  <!-- ===============================================-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet" id="style-default">
+  <link href="assets/css/user.css" rel="stylesheet" id="user-style-default">
+  <script>
+    var isRTL = JSON.parse(localStorage.getItem('isRTL'));
+    if (isRTL) {
+      var linkDefault = document.getElementById('style-default');
+      var userLinkDefault = document.getElementById('user-style-default');
+      linkDefault.setAttribute('disabled', true);
+      userLinkDefault.setAttribute('disabled', true);
+      document.querySelector('html').setAttribute('dir', 'rtl');
+    } else {
+      var linkRTL = document.getElementById('style-rtl');
+      var userLinkRTL = document.getElementById('user-style-rtl');
+      linkRTL.setAttribute('disabled', true);
+      userLinkRTL.setAttribute('disabled', true);
+    }
+  </script>
+</head>
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg shadow-sm">
+        <div class="container-fluid">
+          <div class="row col-12 d-flex justify-content-lg-between align-items-center">
+            <div class="col-8 col-md-8 col-lg-4">
+              <a class="navbar-brand" href="../index.html">
+                <img src="assets/img/logo_hccg.svg" class="py-1 w-50">
+              </a>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block text-center">
+              <span class="fs-lg-6 fs-md-8 text-primary-emphasis">新竹疫苗預約系統</span>
+            </div>
+            <button class="navbar-toggler collapsed d-flex justify-content-end col-4 col-md-4 d-block d-lg-none d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse scrollbar col-lg-4" id="navbarStandard">
+              <ul class="navbar-nav ms-auto d-flex align-items-center">
+                <li class="nav-item"><a class="nav-link" href="appointment_1.html">預約疫苗</a></li>
+                <li><span class="mx-1 d-none d-lg-block">│</span></li>
+                <li class="nav-item"><a class="nav-link" href="search_1.html">查詢預約</a></li>
+                <li><span class="mx-1 d-none d-lg-block">│</span></li>
+                <li class="nav-item"><a class="nav-link" href="search_2.html">查詢接種站及預約時間</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+        
+<!-- 1211修改 start -->
+      <!-- banner start -->
+      <section class="pt-4 pb-0 overflow-hidden shadow-sm bg_banner  navbar-glass-shadow" id="banner" data-bs-theme="light">
+        <div class="container">
+          <div>
+            <img src="assets/img/img_banner2.webp" class="img-fluid" alt="新竹疫苗預約系統">
+          </div>
+        </div>
+      </section>
+      <!-- banner end -->
+
+      <!-- 預約流程start -->
+      <section class="pb-4 mt-n7 mt-md-n8 mt-lg-n9" id="banner">
+        <div class="container">
+          <div class="card py-5">
+            <div class="intro-title mb-2 mb-md-5">預約流程</div>
+            <div class="card-header">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center text-center">
+                  <div class="col-2 text-tertiary_1 px-0">
+                    <!-- 步驟icon：填寫時、填寫完頁面皆使用icon_step1_active.svg -->
+                    <img src="assets/img/icon/icon_step1_active.svg" class="w-100 w-lg-50 mb-2">
+                    <p class="text-tertiary_1 fs-12 fs-md-9 fs-lg-8 title2">新竹通<br>會員登入</p>
+                  </div>
+                  <div class="col-1 text-tertiary_1 text-center align-items-center">
+                    <span class="fas fa-arrow-right fs-8 fs-md-5"></span>
+                  </div>
+                  <div class="col-2 text-tertiary_1 px-0">
+                    <!-- 步驟icon：尚未使用時頁面使用icon_step2_default.svg -->
+                    <!-- 步驟icon：填寫時、填寫完頁面皆使用icon_step1_active.svg -->
+                    <img src="assets/img/icon/icon_step2_active.svg" class="w-100 w-lg-50 mb-2">
+                    <p class="text-tertiary_1 fs-12 fs-md-9 fs-lg-8 title2">基本資料填寫<br>(非實名會員)</p>
+                  </div>
+                  <div class="col-1 text-tertiary_1 text-center align-items-center">
+                    <span class="fas fa-arrow-right fs-8 fs-md-5"></span>
+                  </div>
+                  <div class="col-2 text-tertiary_1 px-0">
+                    <img src="assets/img/icon/icon_step3_active.svg" class="w-100 w-lg-50 mb-2">
+                    <p class="text-tertiary_1 fs-12 fs-md-9 fs-lg-8 title2">選擇<br>疫苗及接種站</p>
+                  </div>
+                  <div class="col-1 text-tertiary_1 text-center align-items-center">
+                    <span class="fas fa-arrow-right fs-8 fs-md-5"></span>
+                  </div>
+                  <div class="col-2 text-tertiary_1 px-0 mt-n3">
+                    <img src="assets/img/icon/icon_step4_default.svg" class="w-100 w-lg-50 mb-2">
+                    <p class="text-tertiary_1 fs-12 fs-md-9 fs-lg-8 title2">完成預約</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--步驟 end -->
+<!-- 1211修改 end -->
+
+              <div class="card-body mt-6">
+                <div class="col-12">
+                  <div class="c-heading__box mb-5">
+                    <strong class="title2">選擇疫苗及接種站</strong>
+                  </div>
+
+                  <!-- from start -->
+                  <form class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="type1"><span class="fas fa-asterisk text-danger me-2"></span>選擇疫苗類別</label>
+                      <select class="form-select" id="type1">
+                        <option>選擇疫苗類別</option>
+                        <option>Text 1</option>
+                        <option>Text 2</option>
+                        <option>Text 3</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="type2"><span class="fas fa-asterisk text-danger me-2"></span>選擇疫苗種類</label>
+                      <select class="form-select" id="type2">
+                        <option>選擇疫苗種類</option>
+                        <option>Text 1</option>
+                        <option>Text 2</option>
+                        <option>Text 3</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="type3"><span class="fas fa-asterisk text-danger me-2"></span>選擇行政區及醫療院所</label>
+                      <select class="form-select" id="type3">
+                        <option>選擇行政區及醫療院所</option>
+                        <option>Text 1</option>
+                        <option>Text 2</option>
+                        <option>Text 3</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="type4"><span class="fas fa-asterisk text-danger me-2"></span>選擇接種日期及時段</label>
+                      <div class="row col-form-label">
+                        <div class="col-md-6">
+                          <select class="form-select" id="type4">
+                            <option>選擇接種日期</option>
+                            <option>Text 1</option>
+                            <option>Text 2</option>
+                            <option>Text 3</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <select class="form-select" id="type4">
+                            <option>選擇接種時段</option>
+                            <option>Text 1</option>
+                            <option>Text 2</option>
+                            <option>Text 3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <label class="form-label" for="type5"><span class="fas fa-asterisk text-danger me-2"></span>公費對象資格</label>
+                      <select class="form-select" id="type5">
+                        <option>選擇公費對象資格</option>
+                        <option>滿6個月以上至國小入學前幼兒</option>
+                        <option>國小、國中、高中、高職、五專一至三年級學生</option>
+                        <option>50至64歲無高風險慢性病成人</option>
+                        <option>具有潛在疾病者，包括(19-64歲)高風險慢性病人、BMI≥30者、罕見病患及重大傷病患者</option>
+                        <option>孕婦及6個月內嬰兒之父母</option>
+                        <option>幼兒園托育人員、托育機構專業人員及居家托育人員(保母)</option>
+                        <option>安養、長期照顧(服務)等機構之受照顧者及其所屬工作人員</option>
+                        <option>禽畜養殖等相關行業工作人員、動物園工作人員及動物防疫人員</option>
+                        <option>醫事及衛生等單位之防疫相關人員</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12 text-center mt-6">
+                      <a href="appointment_4.html" class="btn btn-primary w-50">下一步<span class="fas fa-long-arrow-alt-right ms-2"></span></a>
+                    </div>
+                  </form>
+                  <!-- from end -->
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 預約流程end -->
+
+      <!-- 注意事項start -->
+      <section class="pb-7 pt-4">
+        <div class="container">
+          <div class="card">
+            <div class="card-header bg-teriary50">
+              <span class="fw-bold">選擇疫苗及接種站注意事項</span>
+            </div>
+            <div class="card-body">
+              <ul class="mb-0">
+                <li>65歲以上長者</li>
+                <li>55歲以上原住民</li>
+                <li>醫事及衛生等單位之防疫相關人員</li>
+                <li>安善、善護、長期照顧(服務)等機構之受照顧者及其所屬工作人員</li>
+                <li>6個月以上至國小入學前幼兒</li>
+                <li>孕婦及6個月內嬰兒之父母</li>
+                <li>具有潛在疾病者，包括高風險慢性病人(19-64歲)、BMI≥30者、罕見病患及重大傷病患者</li>
+                <li>幼兒園托育人員、托育機構專業人員及居家托育人員(保母)</li>
+                <li>國小、國中、高中、高職、五專一至三年級學生</li>
+                <li>禽畜相關及動物防疫人員</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 注意事項end -->
+     
+      <!-- Footer start -->
+      <section class="footer_info bg-teriary50 pt-6 pb-4">
+        <div class="container">
+          <div class="position-absolute btn-back-to-top bg-teriary50">
+            <a class="text-600" href="#banner" data-bs-offset-top="0">
+              <span class="fas fa-chevron-up text-primary" data-fa-transform="rotate-45"></span>
+            </a>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-2 d-none d-sm-none d-lg-block">
+              <img src="assets/img/logo_hccg.svg" class="img-fluid">
+            </div>
+<!-- 1211修改 start -->
+            <div class="col-12 col-lg-7 ps-0 fs-11 fs-md-9">
+              <ul>
+                <li>
+                  <span class="far fa-building text-tertiary500 me-2"></span>
+                  <span class="fw-bold">地址：</span>300191 新竹市中正路120號
+                </li>
+                <li>
+                  <spam class="fas fa-phone-alt text-tertiary500 me-2"></spam>
+                  <spam class="fw-bold ">總機：</spam>03-5216121
+                  <span class="mx-1">│</span>
+                  <span><a href="/ch/home.jsp?id=46&amp;parentpath=0,7" title="分機號碼表">分機號碼表</a></span>
+                  <span class="mx-1">│</span>
+                  <span><a href="https://bossmail.hccg.gov.tw/" title="市政陳情">市政陳情</a></span>
+                </li>
+                <li>
+                  <spam class="far fa-clock text-tertiary500 me-2"></spam>
+                  <spam class="fw-bold">服務時間：</spam>週一至週五8：00~12：00，13：00~17：00
+                </li>
+                <li>
+                  <spam class="fas fa-phone-volume text-tertiary500 me-2"></spam>
+                  <spam class="fw-bold">24小時服務專線：</spam><a href="https://bossmail.hccg.gov.tw/home.jsp?id=10030&amp;parentpath=0,14" title="1999"> 1999</a>（限新竹市境內直撥）、03-5216121轉9
+                </li>
+                <li>
+                  <span class="far fa-comment-dots text-tertiary500 me-2"></span>
+                  <span>對於廉政議題若有任何想法，歡迎電洽本府廉政專線：03-5269193、<a href="mailto:hc3200@ems.hccg.gov.tw" title="廉政信箱">&nbsp;廉政信箱</a></span>
+                </li>
+                <li>
+                  <p class="mt-3 text-500 ">本網站支援IE 9以上、Chrome及Firefox、edge等瀏覽器，建議使用螢幕解析度1024x768可得到最佳瀏覽效果。</p>
+                </li>
+              </ul>
+            </div>
+<!-- 1211修改 end -->
+            <div class="col-12 col-lg-3 text-center d-flex justify-content-center">
+              <div class="mx-3">
+                <img src="assets/img/img_add.png" class="img-fluid shadow-sm">
+                <p class="fs-10 mt-2"><a href="home.jsp?id=12&amp;parentpath=0,7" title="市府怎麼去">市府怎麼去</a></p>
+              </div>
+              <div>
+                <img src="assets/img/img_line.png" class="img-fluid shadow-sm">
+                <p class="fs-10 mt-2"><a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=xat.0000111557.29l" title="市府官方line">市府官方line</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer end -->
+
+      <!-- Copyright start -->
+      <section class="py-2 bg-third">
+        <div class="Copyright">
+          <div class="container py-3">
+            <div class="row d-flex justify-content-md-center">
+              <div class="col-12 col-md-6 d-flex justify-content-lg-start text-600 text-center text-lg-start ps-5 ps-md-0 ps-lg-0 ps-xl-0">
+                <span><a href="home.jsp?id=10049&amp;parentpath=0,19" title="隱私權及安全政策">隱私權及安全政策</a></span>
+                <span class="mx-1">│</span>
+                <span><a href="home.jsp?id=10051&amp;parentpath=0,19" title="政府網站資料開放宣告">政府網站資料開放宣告</a></span>
+              </div>
+              <p class="my-2 d-block d-sm-none"></p>
+              <div class="col-12 col-md-6 col-sm-auto">
+                <p class="mb-0 text-placeholder text-center text-lg-end">Copyright &copy; 2024 新竹市政府版權所有</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      <!-- Copyright end -->
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../vendors/fontawesome/all.min.js"></script>
+    <script src="../vendors/list.js/list.min.js"></script>
+    <script src="../assets/js/theme.js"></script>
+
+  </body>
+
+</html>
